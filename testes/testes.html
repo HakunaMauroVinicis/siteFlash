@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width-device-width, initialscale=1, shork-to-fit=no">
+		<title> ::.. teste ..::</title>
+	</head>
+<style>
+/********************* CSS ***********************/
+.lista-item{
+	background: #fff;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	padding: 10px;
+	box-shadow: 0 2px 6px rgba(50, 50, 90, 0.1);
+}
+.faq-titulo{
+	cursor: pointer;
+	padding: 10px;
+	font-size: 1rem;
+	font-family: monospace;
+	color: #F00;
+	display: flex;
+	align-items: center;
+}
+.faq-titulo::before{
+	content: "+";
+	font-size: 2rem;
+	padding: 0 15px;
+	transition: transform .3s ease;
+}
+.faq-conteudo{
+	padding: 10px;
+	color: #000;
+	font-family: sans-serif;
+	font-size: .875rem;
+	line-height: 1.4rem;
+	display: none;
+	overflow: auto;
+	max-height: 200px;
+}
+#con_ocpprinc1{
+	width: 100%;
+}
+.trigger-input{
+	display: none;
+}
+.trigger-input:checked + .trigger-wrapper .faq-titulo::before{
+	content: "-";
+
+	transform: rotate(180deg) scale(1.08);
+}
+.trigger-input:checked + .trigger-wrapper .trigger-conteudo{
+	display: block;
+}
+/************************** HTML **********************************/
+</style>
+	<body>
+		<div class="lista-item">
+			<input type="checkbox" class="trigger-input" id="faq-titulo-0">
+				<div class="trigger-wrapper" style="background: white;">
+					<label for="faq-titulo-0">
+						<h2 class="faq-titulo">TESTE PARA SITE</h2>
+					</label>
+					<p class="faq-conteudo">
+						
+								texto
+						
+					</p>
+				</div>
+		</div>
+	</body>
+</html>
